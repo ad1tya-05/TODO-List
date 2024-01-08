@@ -31,13 +31,6 @@
     </div>
 
   
-  ///Within the <body> tag, this section creates the main content of the page:
-
-A container <div> that holds the page content.
-An input field (<input>) for users to enter a task.
-An "Add Task" button (<button>) to add the task.
-A table (<table>) with a header row (<thead>) and a body (<tbody>) where the tasks will be displayed. Initially, this area is empty (id="task-list").///
-  
     
     <script>
         // JavaScript code
@@ -46,7 +39,6 @@ A table (<table>) with a header row (<thead>) and a body (<tbody>) where the tas
 </html>
 
 
-//The JavaScript section handles the functionality of the page. It consists of three main functions: loadTasks(), addTask(), and event listeners.//
 
 
 function loadTasks() {
@@ -70,7 +62,6 @@ function loadTasks() {
         });
 }
 
-//This function loads tasks by making a GET request to the specified API endpoint. Upon receiving the data, it creates table rows for each task and appends them to the table body.//
 
 function addTask() {
     // Get the task input value
@@ -91,18 +82,6 @@ function addTask() {
     });
 }
 
-// Event listener for the "Add Task" button click
-document.getElementById('add-task-btn').addEventListener('click', addTask);
-
-// Initially load tasks when the page loads
-loadTasks();
-
-
-//This addTask() function handles adding new tasks. It takes the value entered in the input field, sends a POST request to the API with the task title in JSON format, and upon success, reloads the tasks to update the displayed list.
-
-The addEventListener method attaches a click event listener to the "Add Task" button, so when it's clicked, the addTask() function is called.
-
-Lastly, loadTasks() is called at the end to initially load tasks when the page loads.//
 
 
 
